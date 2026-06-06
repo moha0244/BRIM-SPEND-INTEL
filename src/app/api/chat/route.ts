@@ -538,7 +538,7 @@ export async function POST(req: NextRequest) {
       typeof message?.content === "string"
         ? message.content
         : Array.isArray(message?.content)
-          ? message.content.map((c: { text?: string }) => c.text ?? "").join("")
+          ? message.content.map((c) => ("text" in c ? (c.text ?? "") : "")).join("")
           : "Je n'ai pas pu générer de réponse.";
 
     // Nettoyage minimal — supprimer seulement les blocs de code et JSON évidents
