@@ -57,4 +57,4 @@ L'app tourne sur [http://localhost:3000](http://localhost:3000).
 
 ## Note sur MCP
 
-Le projet n'intègre pas MCP (Model Context Protocol) pour l'instant. L'architecture du chat IA repose sur le tool calling natif de Mistral, qui couvre les mêmes besoins pour ce projet.
+Le projet n'intègre pas MCP (Model Context Protocol) pour l'instant. L'architecture du chat IA repose sur le tool calling natif de Mistral.
