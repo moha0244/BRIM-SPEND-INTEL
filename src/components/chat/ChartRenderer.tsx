@@ -452,7 +452,7 @@ export default function ChartRenderer({ chartData }: { chartData: ChartData }) {
               cy="50%"
               outerRadius={80}
               label={({ name, percent }) =>
-                `${String(name).slice(0, 14)} ${(percent * 100).toFixed(0)}%`
+                `${String(name).slice(0, 14)} ${((percent ?? 0) * 100).toFixed(0)}%`
               }
               labelLine={false}
             >
