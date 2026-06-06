@@ -423,8 +423,8 @@ export default function ChartRenderer({ chartData }: { chartData: ChartData }) {
               tickLine={false}
             />
             <Tooltip
-              formatter={(v: number) => [
-                isMonetary ? fmtFull(v) : v.toLocaleString("fr-CA"),
+              formatter={(v) => [
+                isMonetary ? fmtFull(Number(v)) : Number(v).toLocaleString("fr-CA"),
                 yKey.replace(/_/g, " "),
               ]}
               contentStyle={tooltipStyle}
@@ -461,8 +461,8 @@ export default function ChartRenderer({ chartData }: { chartData: ChartData }) {
               ))}
             </Pie>
             <Tooltip
-              formatter={(v: number) => [
-                isMonetary ? fmtFull(v) : v.toLocaleString("fr-CA"),
+              formatter={(v) => [
+                isMonetary ? fmtFull(Number(v)) : Number(v).toLocaleString("fr-CA"),
               ]}
               contentStyle={tooltipStyle}
             />
