@@ -121,7 +121,9 @@ export interface Report {
   date_start: string;
   date_end: string;
   total_amount_cad: number;
+  transaction_count?: number;
   status: ReportStatus;
+  ai_summary?: string;
   cfo_recommendation?: string;
   created_at: string;
 }

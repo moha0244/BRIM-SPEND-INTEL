@@ -43,7 +43,7 @@ export default function ApprovalsPage() {
       console.error("[decide] PATCH failed", await res.text());
       return;
     }
-    setRequests(prev => prev.map(r => r.id === id ? { ...r, decision } : r));
+    setRequests(prev => prev.map(r => r.id === id ? { ...r, decision: decision as ApprovalRequest["decision"] } : r));
     setStats(prev => ({
       ...prev,
       pending: Math.max(0, prev.pending - 1),
