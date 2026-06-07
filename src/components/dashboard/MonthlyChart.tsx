@@ -28,7 +28,7 @@ export function MonthlyChart({ data }: MonthlyChartProps) {
           <CartesianGrid strokeDasharray="3 3" stroke="#1a2236" />
           <XAxis dataKey="label" tick={{ fontSize: 10, fill: "#3A4A6A", fontFamily: MONO }} axisLine={false} tickLine={false} />
           <YAxis tickFormatter={v => fmtCAD(v, true)} tick={{ fontSize: 10, fill: "#3A4A6A", fontFamily: MONO }} width={58} axisLine={false} tickLine={false} />
-          <Tooltip formatter={(v: number) => [fmtCAD(v), "Total"]} contentStyle={tooltipStyle} />
+          <Tooltip formatter={(v) => [fmtCAD(Number(v)), "Total"]} contentStyle={tooltipStyle} />
           <Line type="monotone" dataKey="total" stroke="#3b6aff" strokeWidth={2} dot={{ fill: "#3b6aff", r: 3, strokeWidth: 0 }} activeDot={{ r: 5 }} />
         </LineChart>
       </ResponsiveContainer>
